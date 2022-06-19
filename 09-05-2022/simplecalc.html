@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+    <body style="background-color: lavender;">
+        <button onclick="calc()">SIMPLE CALCULATOR</button>
+        <h4>RESULT:</h4>
+        <p id="result"></p>
+        <script>
+            function calc()
+            {
+                var res;
+                var n1=prompt("Enter the first number");
+                var n2=prompt("Enter the second number");
+                var op=prompt("Enter the operators");
+                if(op=="+")
+                {
+                    res=parseInt(n1)+parseInt(n2);
+
+                }
+                else if(op=="-")
+                {
+                    res = parseInt(n1)-parseInt(n2);
+                }
+                else if(op=="*")
+                {
+                    res = parseInt(n1)*parseInt(n2);
+
+                }
+                else if(op=="/")
+                {
+                    res = parseInt(n1)/parseInt(n2);
+                }
+                document.getElementById("result").innerHTML=res;
+            }
+
+        </script>
+    </body>
+</html>

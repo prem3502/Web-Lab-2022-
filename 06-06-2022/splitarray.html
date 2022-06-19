@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Slicing of an array</p> <button class="slice" onclick="slicearr()">Click here</button>
+    <p>Sum of even elements of array</p> <button class="evensum" onclick="evensum()">Click here</button>
+    <script>
+        function slicearr() {
+            var s1=Number(prompt('Enter the size of the array'));
+            var arr = [];
+            for(let i=0;i<s1;i++)
+            {
+                arr[i]=Number(prompt('Enter the array element'));
+            }
+            var res = arr.slice(2,4);
+            for(let i=0;i<arr.length;i++){
+                document.write(arr[i]+" ");
+
+            }
+            document.write("\nSliced array from 2 to 4-");
+            for(let i=0;i<res.length;i++){
+                document.write(" "+res[i]+" ");
+
+            }
+        }
+
+        function evensum()
+        {
+            var arr=[];
+            var sum=0;
+            var s1=Number(prompt('Enter the size of the array'));
+            for(let i=0;i<s1;i++){
+                arr[i]=Number(prompt('Enter the array element'));
+                if(arr[i]%2==0)
+                {
+                    sum+=arr[i];
+                }
+
+            }
+            for(let i=0;i<arr.length;i++){
+                document.write(arr[i]+" ");
+            }
+            document.write("Sum of even elements: "+sum);
+          
+
+        }
+    </script>
+</body>
+</html>

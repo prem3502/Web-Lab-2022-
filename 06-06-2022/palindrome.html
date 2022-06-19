@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label>Enter the string:</label>
+        <input type="text" id="ip">
+        <input type="submit" value="SUBMIT" onclick="input()">
+    </form>
+    <script>
+        const checkpal = str =>
+        {
+            var arr = str.split("");
+            var rev = arr.reverse();
+            var revstr = rev.join("");
+            if(str == revstr)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        function input()
+        {
+            var str=document.getElementById("ip").value;
+            alert(checkpal(str));
+
+        
+
+        }
+    </script>
+</body>
+</html>

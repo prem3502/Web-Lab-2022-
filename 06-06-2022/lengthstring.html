@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Cick to enter the array of strings</p>
+    <button onclick="input()">CLICK</button>
+    <script>
+        const disp = (str,len) => { 
+            for(i=0;i<str.length;i++) {
+                if(str[i].length == len) {
+                    document.write(str[i]+ " ");
+                }
+            }
+        }
+        function input()
+        {
+            var s1 = Number(prompt('Enter the array size'));
+            var str=[]
+            for(let i=0;i<s1;i++)
+            {
+                str[i]=prompt('Enter the strings');
+
+            }
+            var len =prompt("Enter the string length")
+            disp(str,len);
+
+        }
+    </script>
+</body>
+</html>
